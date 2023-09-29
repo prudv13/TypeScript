@@ -33,3 +33,29 @@ function greeting(person: string = "stranger"): string {
 
 console.log(greeting());
 ```
+## Anonymous Functions
+
+When Typescript can infer how an unnamed function is going to be called, it can automatically infer its parameters types.
+
+```ts
+const numbers = [1,2,3];
+
+// Contextual typing on an arrow function
+numbers.forEach(num => 
+    return num.toUppercase(); // Error
+    // toUpperCase() doesn't work for nums
+)
+```
+
+## Void Type
+
+- Void is a return type for functions that don't return anything. It means just that - this function is void of any data.
+- Typescript can infer this type fairly well, but sometimes it may want you to annotate a function with a void return explicitly.
+
+```ts
+const annoyUser = (num: number): void => {
+    for(let i=0; i<num; i++){
+        alert('Hiiiiiiiiii !');
+    }
+}
+```
