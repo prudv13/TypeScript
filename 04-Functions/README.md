@@ -59,3 +59,23 @@ const annoyUser = (num: number): void => {
     }
 }
 ```
+
+## Never Type
+
+- The never type represents values that NEVER occur.
+- We might us it to annotate a function that always throws an exception, or a function that never finishes executing.
+- With never, a function doesn't even finish executing
+
+```ts
+// A function that doesn't finish running
+const neverStop = (): never => {
+    while(true) {
+        console.log("I'm still going!");
+    }
+}
+
+// A function that throws an exception
+const giveError = (msg: string) => {
+    throw new Error(msg);
+}
+```
