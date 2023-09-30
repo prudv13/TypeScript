@@ -32,3 +32,22 @@ function randomCoordinate(): {x: number, y: number} {
 
 randomCoordinate();
 ```
+
+# Type Alias
+
+Instead of writing out object types in an annotation, we can declare them separately in a type alias, which is simply the desired shape of the object.
+
+This allows us to make our code more readable and even reuse the types elsewhere in our code.
+
+```ts
+type Person = {
+    name: string;
+    age: number;
+}
+
+const sayHappyBirthday = (person: Person) => {
+    return `Hey ${person.name}, congrats on turning ${age}!`;
+}
+
+sayHappyBirthday({name: 'Jerry', age: 42});
+```
