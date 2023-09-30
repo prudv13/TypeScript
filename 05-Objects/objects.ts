@@ -30,3 +30,9 @@ function randomCoordinate(): {x: number, y: number} {
 }
 
 randomCoordinate();
+
+// ------------------------------------------------
+// excess properties
+
+const singer = {first: "Mick", last: "Jagger", age: 473, isAlive: true}
+printName(singer)
