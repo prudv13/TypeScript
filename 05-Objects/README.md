@@ -51,3 +51,30 @@ const sayHappyBirthday = (person: Person) => {
 
 sayHappyBirthday({name: 'Jerry', age: 42});
 ```
+
+# Nested Objects
+
+```ts
+type Child = {
+    name: string;
+    age: number;
+    parentNames:  {
+        mom: string;
+        dad: string;
+    }
+}
+
+const describeChild = (child: Child) : string => {
+    return `Child Name: ${child.name}, age: ${child.age}, Mother Name: ${child.parentNames.mom}, Father Name: ${child.parentNames.dad}`
+}
+
+const jimmy = {
+    name: 'Jimmy',
+    age: 10,
+    parentNames: {
+        mom: 'Lisa',
+        dad: 'Jay'
+    }
+}
+console.log(describeChild(jimmy))
+```
