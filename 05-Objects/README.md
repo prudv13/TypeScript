@@ -93,3 +93,21 @@ type Point = {
 
 const myPoint: Point = {x: 1, y: 3};
 ```
+
+# Read Only Modifier
+
+The readonly modifier in TypeScript allows you to mark properties as immutable. Immutable properties cannot be changed after they are initialized. This can be useful for preventing accidental changes to important data, such as a user's ID or the current time.
+
+To mark a property as readonly, simply add the readonly keyword before the property name.
+
+```ts
+type User = {
+    readonly id: number;
+    username: string;
+};
+
+const user: User = {
+    id: 12837,
+    username: 'phoenix13'
+}
+```
