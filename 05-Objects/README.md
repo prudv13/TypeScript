@@ -78,3 +78,18 @@ const jimmy = {
 }
 console.log(describeChild(jimmy))
 ```
+
+# Optional Properties
+An optional property in TypeScript is a property that is not required to be present on an object. This is useful for modeling data that may or may not be available, such as a user's profile information or the results of an API call.
+
+To mark a property as optional in TypeScript, simply add a question mark (?) after the property name.
+
+```ts
+type Point = {
+    x: number;
+    y: number;
+    z?: number;
+};
+
+const myPoint: Point = {x: 1, y: 3};
+```
