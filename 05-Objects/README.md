@@ -111,3 +111,26 @@ const user: User = {
     username: 'phoenix13'
 }
 ```
+
+# Intersection Types
+
+Intersection types in TypeScript allow you to combine two or more types into a single type that has all the properties of the original types. This can be useful for modeling complex data structures or for creating reusable types.
+
+To create an intersection type, you simply use the ampersand (&) operator between the two types that you want to intersect.
+
+```ts
+type Circle = {
+    radius: number;
+};
+
+type Colorful = {
+    color: string;
+};
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+    radius: 4,
+    color: 'yellow',
+}
+```
