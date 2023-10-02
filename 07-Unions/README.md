@@ -34,3 +34,24 @@ coordinates = {
     long: 23.331
 }
 ```
+
+# Type Narrowing
+
+Narrowing the type is simply doing a type check before working with a value. If your value is a string you may want to use it differently than if you got a number.
+
+Since unions allow multiple types for a value, it's good to check what came through before working with it.
+
+```ts
+const isTeenager = (age: number | string) => {
+    if(typeof age === "string") {
+        age = parseInt(age);
+        console.log(age > 12 && age < 20);
+    }
+    if(typeof age === "number") {
+        console.log(age > 12 && age < 20);
+    }
+}
+
+isTeenager('20'); // false
+isTeenager(13); // true
+```
