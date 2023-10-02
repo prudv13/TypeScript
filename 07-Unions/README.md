@@ -55,3 +55,17 @@ const isTeenager = (age: number | string) => {
 isTeenager('20'); // false
 isTeenager(13); // true
 ```
+
+# Literal Types with Unions
+
+Literal types are not just types - but the values themselves too! Combine it with something like unions and you can have fine-tuned type options for typescript to enforce.
+
+```ts
+const giveAnswer = (answer: "yes" | "no" | "maybe") => {
+    return `The answer is ${answer}.`;
+}
+
+giveAnswer("no");
+giveAnswer("yes");
+giveAnswer("maybe");
+```
