@@ -21,3 +21,17 @@ type Point = {
 const coords: Array<Point> = [];
 coords.push({x: 23, y: 18});
 ```
+
+# Multi-Dimensional Array
+
+```ts
+// two dimensional array
+const board: string[][] = [
+    ["X", "0", "X"],
+    ["X", "0", "X"],
+    ["X", "0", "X"]
+]
+
+// three dimensional array
+const demo: number[][][] = [[[1]]]
+```
