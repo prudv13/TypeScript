@@ -44,3 +44,40 @@ const shoes: Product = {
 }
 
 shoes.applyDiscount(0.4);
+
+// --------------------------------------------
+
+interface Dog {
+    name: string;
+    age: number;
+}
+
+interface Dog {
+    breed: string;
+    bark(): string;
+}
+
+const elton: Dog = {
+    name: "Elton",
+    age: 0.5,
+    breed: "Australian Shepherd",
+    bark() {
+        return "WOOF WOOF!";
+    },
+};
+
+// extending interfaces
+interface ServiceDog extends Dog {
+    job: "drug sniffer" | "bomb finder" | "guide dog"
+}
+
+
+const chewy: ServiceDog = {
+    name: "Chewy",
+    age: 4.5,
+    breed: "Lab",
+    bark() {
+        return "Bark!"
+    },
+    job: "guide dog",
+}
