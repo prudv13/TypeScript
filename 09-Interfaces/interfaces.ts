@@ -12,10 +12,14 @@ interface Person {
     first: string;
     last: string;
     nickName?: string;
+    sayHi: () => string;
+    sayHello(): string;
 }
 
 const thomas: Person = {
     id: 2134,
     first: "Thomas",
-    last: "Hardy"
+    last: "Hardy",
+    sayHi: () => "Hi",
+    sayHello: () => "Hello"
 };
