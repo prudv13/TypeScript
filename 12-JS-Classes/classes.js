@@ -27,6 +27,11 @@ class Player {
     #secret(){
         console.log("SECRET!!!")
     }
+
+    // getter
+    get fullName() {
+        return `${this.first} ${this.last}`;
+    }
 }
 
 const player1 = new Player("blue", "steele");
@@ -39,3 +44,6 @@ console.log(player1);
 console.log(player1.getScore());
 player1.setScore(20);
 console.log(player1.getScore());
+
+// get fullname
+console.log(player1.fullName);
