@@ -32,6 +32,13 @@ class Player {
     get fullName() {
         return `${this.first} ${this.last}`;
     }
+
+    //setter
+    set fullName(newName){
+        const [first, last] = newName.split(" ");
+        this.first = first;
+        this.last = last;
+    }
 }
 
 const player1 = new Player("blue", "steele");
@@ -46,4 +53,8 @@ player1.setScore(20);
 console.log(player1.getScore());
 
 // get fullname
+console.log(player1.fullName);
+
+// set fullname
+player1.fullName =  "Colt Steele";
 console.log(player1.fullName);
