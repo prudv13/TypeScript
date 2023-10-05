@@ -60,3 +60,31 @@ tsc --watch
   ]
 }
 ```
+
+# Include Compiler Option
+
+- Specifies an array of filenames or patterns to include in the program.
+- These filenames are resolved relative to the directory containing the tsconfig.json file.
+
+### open "tsconfig.json"
+
+```json
+{
+  "include": ["src/**/*", "tests/**/*"]
+}
+```
+
+include and exclude support wildcard characters to make glob patterns:
+
+    * matches zero or more characters (excluding directory separators)
+    ? matches any one character (excluding directory separators)
+    **/ matches any directory nested to any level
+
+
+# Exclude Compiler Option
+
+Specifies an array of filenames or patterns that should be skipped when resolving include.
+
+Important: exclude only changes which files are included as a result of the include setting. A file specified by exclude can still become part of your codebase due to an import statement in your code, a types inclusion, a /// <reference directive, or being specified in the files list.
+
+It is not a mechanism that prevents a file from being included in the codebase - it simply changes what the include setting finds.
