@@ -88,3 +88,21 @@ Specifies an array of filenames or patterns that should be skipped when resolvin
 Important: exclude only changes which files are included as a result of the include setting. A file specified by exclude can still become part of your codebase due to an import statement in your code, a types inclusion, a /// <reference directive, or being specified in the files list.
 
 It is not a mechanism that prevents a file from being included in the codebase - it simply changes what the include setting finds.
+
+```json
+"exclude": ["src/dontTouch.ts", "node_modules"],
+```
+
+# Out Dir
+
+If specified, .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory. The directory structure of the original source files is preserved; see rootDir if the computed root is not what you intended.
+
+If not specified, .js files will be emitted in the same directory as the .ts files they were generated from.
+
+```json
+{
+  "compilerOptions": {
+    "outDir": "./dist"
+  }
+}
+```
