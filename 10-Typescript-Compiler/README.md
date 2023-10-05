@@ -35,3 +35,28 @@ tsc -w
 
 tsc --watch
 ```
+
+# Files Compiler Option
+
+- Specifies an allowlist of files to include in the program.
+- An Error occurs if any of the files can't be found.
+- Add these after the compiler options.
+
+### open "tsconfig.json"
+
+```json
+{
+  "compilerOptions": {},
+  "files": [
+    "core.ts",
+    "sys.ts",
+    "types.ts",
+    "scanner.ts",
+    "parser.ts",
+    "utilities.ts",
+    "binder.ts",
+    "checker.ts",
+    "tsc.ts"
+  ]
+}
+```
