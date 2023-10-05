@@ -21,3 +21,10 @@ You can learn more at https://aka.ms/tsconfig
 tsc index.ts
 ```
 ### index.js file is created
+
+# Watch Mode
+```bash
+tsc -w filename
+
+tsc --watch filename
+```
