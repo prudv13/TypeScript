@@ -63,3 +63,18 @@ player1.fullName =  "Colt Steele";
 console.log(player1.fullName);
 
 console.log(Player.description);
+
+// ======================================================
+
+class AdminPlayer extends Player {
+    isAdmin = true;
+    constructor(first, last, powers){
+        super(first, last);
+        this.powers = powers;
+    }
+}
+
+const admin = new AdminPlayer("Admin", "McAdmin", ["invisible", "fly"]);
+
+console.log(admin);
+admin.taunt();
