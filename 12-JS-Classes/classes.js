@@ -3,6 +3,9 @@ class Player {
     #score = 0; // private
     numLives = 10;
 
+    // static property
+    static description = "Player In Our Game";
+
     constructor(first, last){
         this.first = first;
         this.last = last;
@@ -58,3 +61,5 @@ console.log(player1.fullName);
 // set fullname
 player1.fullName =  "Colt Steele";
 console.log(player1.fullName);
+
+console.log(Player.description);
