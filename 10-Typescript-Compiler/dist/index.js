@@ -1,5 +1,5 @@
 "use strict";
-const norma = {
+var norma = {
     breed: "Silkie",
     eggsPerWeek: 4,
     name: "Norma",

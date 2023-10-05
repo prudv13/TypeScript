@@ -106,3 +106,17 @@ If not specified, .js files will be emitted in the same directory as the .ts fil
   }
 }
 ```
+
+# Target
+
+Modern browsers support all ES6 features, so ES6 is a good choice. You might choose to set a lower target if your code is deployed to older environments, or a higher target if your code is guaranteed to run in newer environments.
+
+The target setting changes which JS features are downleveled and which are left intact. For example, an arrow function () => this will be turned into an equivalent function expression if target is ES5 or lower.
+
+```json
+{
+  "compilerOptions": {
+    "target": "es2016"
+  }
+}
+```
