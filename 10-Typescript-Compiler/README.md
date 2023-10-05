@@ -28,3 +28,10 @@ tsc -w filename
 
 tsc --watch filename
 ```
+watch mode for multiple files
+
+```bash
+tsc -w
+
+tsc --watch
+```
