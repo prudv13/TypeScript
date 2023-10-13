@@ -64,3 +64,35 @@ console.log(bike1);
 const jacket1 = new Jacket("Prada", "Black");
 console.log(jacket1);
 jacket1.print();
+
+// abstract classes ====================================
+
+
+abstract class Employee {
+    constructor(public first: string, public last: string){}
+    abstract getPay(): number;
+}
+
+class FullTimeEmployee extends Employee {
+    constructor(public first: string, public last: string, private salary: number){
+        super(first, last);
+    }
+    getPay(): number {
+        return this.salary;
+    }
+}
+
+class PartTimeEmployee extends Employee {
+    constructor(public first: string, public last: string, private hourlyPay: number, private hoursWorked: number){
+        super(first, last);
+    }
+    getPay(): number {
+        return this.hourlyPay*this.hoursWorked;
+    }
+}
+
+const betty = new FullTimeEmployee("Betty", "White", 95000);
+console.log(betty.getPay());
+
+const bill = new PartTimeEmployee("Bill", "Billerson", 24, 1100);
+console.log(bill.getPay());
