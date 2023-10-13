@@ -1,6 +1,6 @@
 class Player {
-    public score: number = 0;
-    private gender: string = 'male';
+    protected score: number = 0;
+    private _gender: string = 'male';
 
     constructor(public first: string, public last: string){
         this.first = first;
@@ -12,7 +12,7 @@ class Player {
     }
 
     get getGender(): string {
-        return this.gender;
+        return this._gender;
     }
 
     get fullName(): string {
@@ -25,3 +25,14 @@ const elton = new Player("Elton", "Steele");
 console.log(elton);
 console.log(elton.fullName);
 console.log(elton.getGender);
+
+
+class SuperPlayer  extends Player{
+    public isAdmin: boolean = true;
+    maxScore(){
+        this.score = 999;
+    }
+}
+
+const adminPlayer = new SuperPlayer("Admin", "Player");
+console.log(adminPlayer);
