@@ -36,3 +36,31 @@ class SuperPlayer  extends Player{
 
 const adminPlayer = new SuperPlayer("Admin", "Player");
 console.log(adminPlayer);
+
+// classes and interfaces
+
+interface Colorful {
+    color: string;
+}
+
+interface Printable {
+    print(): void;
+}
+
+class Bike implements Colorful {
+    constructor(public color: string){}
+}
+
+class Jacket implements Colorful, Printable {
+    constructor(public brand:string, public color: string){}
+    print(){
+        console.log(`${this.color} ${this.brand} jacket`);
+    }
+}
+
+const bike1 = new Bike("red");
+console.log(bike1);
+
+const jacket1 = new Jacket("Prada", "Black");
+console.log(jacket1);
+jacket1.print();
