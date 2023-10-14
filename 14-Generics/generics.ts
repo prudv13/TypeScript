@@ -18,3 +18,13 @@ function identity<T>(item: T): T{
 console.log(identity<string>("Magician"));
 console.log(identity<number>(13));
 console.log(identity<boolean>(true));
+
+
+// =====================================================================
+
+function getRandomElement<T>(list: Array<T>): T{
+    const randIdx = Math.floor(Math.random()*list.length);
+    return list[randIdx];
+}
+
+getRandomElement<string>(['hello', 'world']);
