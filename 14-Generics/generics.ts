@@ -11,3 +11,10 @@ const btn = document.querySelector<HTMLButtonElement>(".btn")!;
 
 // =====================================================================
 
+function identity<T>(item: T): T{
+    return item;
+};
+
+console.log(identity<string>("Magician"));
+console.log(identity<number>(13));
+console.log(identity<boolean>(true));

@@ -7,3 +7,14 @@ function wrapInArray<T>(element: T): T[] {
     return [element];
 }
 ```
+
+## Genrics Example
+```ts
+function identity<T>(item: T): T{
+    return item;
+};
+
+console.log(identity<string>("Magician"));
+console.log(identity<number>(13));
+console.log(identity<boolean>(true));
+```
