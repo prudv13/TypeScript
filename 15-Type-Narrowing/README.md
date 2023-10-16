@@ -30,3 +30,20 @@ const printLetters = (word: string | null) => {
     }
 }
 ```
+
+## Equality Narrowing
+
+Wquality type gaurds involve comparing types to each other before doing certain operations with values. By checking two values against one another, we can be sure they're both the same before working with them in a type-specific way.
+
+```ts
+const someFunc = (x: string | boolean, y: string | number) => {
+    if(x === y){
+        // x and y are strings in this case
+        x.toUpperCase();
+        y.toLowerCase();
+    } else {
+        console.log(x);
+        console.log(y);
+    }
+}
+```
