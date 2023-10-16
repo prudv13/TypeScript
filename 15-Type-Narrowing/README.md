@@ -47,3 +47,21 @@ const someFunc = (x: string | boolean, y: string | number) => {
     }
 }
 ```
+
+## in Operator Narrowing
+
+JavaScript's in operator helps check if a cetrtain property exists in an object. This means we can use it to check if a value exists in an object, according to its type alias or aliases, before working with it.
+
+```ts
+type Cat = { meow: () => void};
+type Dog = {bark: () => void};
+
+const talk = (creature: Cat | Dog) => {
+    if("meow" in creature){
+        console.log(creature.meow());
+    }
+    else{
+        console.log(creature.bark());
+    }
+};
+```
